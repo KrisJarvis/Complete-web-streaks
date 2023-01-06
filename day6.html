@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>
+
+        </title>
+        <style type="text/css" >
+            #CS{
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: pink;}
+            #CScanvas1{
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: green;
+            }
+            #CScanvas2{
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            #CScanvas3{
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="CS"></div>
+        <!-- <div id="CScanvas1"></div>
+        <div id="CScanvas2"></div>
+        <div id="CScanvas3"></div> -->
+        <!-- <iframe src="https://www.google.co.in"></iframe> -->
+        <!-- <p>This is a Paragraph.... </p>
+        <button id="but0">Toggle button</button> -->
+        <!-- <button id="but1">FadeIn</button> -->
+
+
+
+
+        <script>
+            $("#CScanvas1").hover(function(){
+                $("#CScanvas1").css("display","none");
+                
+                // alert("The Circle was clicked")
+                // $("iframe").attr("src","https://www.kashipara.com/")
+            });
+            $("#CScanvas2").click(function(){
+                $("#CScanvas2").css("display","none");
+                alert(" The 1st Square was clicked")
+            });
+            $("#CScanvas3").click(function(){
+                $("#CScanvas3").css("display","none");
+                alert("The 2nd Square was clicked")
+            });
+
+
+            
+            
+            $("#but0").click(function(){
+                if($("p").css("display")=="none" ){
+                $("p").fadeIn();
+                }else{
+                $("p").fadeOut("slow")}
+            });
+
+            $("#CS").click(function () {
+            alert("okay");
+                $(this).animate(
+                    {marginLeft:"100px",
+                    width:"400px",
+                    height:"400px", 
+                    marginTop:"100px"},2000,function(){
+                        $(this).css("background-color","red")
+                    }
+                    
+                )
+            })
+            
+
+        </script>
+
+
+
+    </body>
+</html>
